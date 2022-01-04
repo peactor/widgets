@@ -25,7 +25,7 @@ class MyHomePage extends StatelessWidget {
       ),
       body: Row(
         mainAxisSize: MainAxisSize.max,
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,
 
         children: <Widget>[
