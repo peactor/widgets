@@ -20,20 +20,36 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final items = List.generate(100, (i) => i+1).toList();
-
 
     return Scaffold(
       appBar: AppBar(
         title: Text('제목'),
       ),
       body:
-      SingleChildScrollView(
-        child: ListBody(
-          children: items.map((i) => Text('$i')).toList(),
-        ),
-      ),
+        ListView(
+          scrollDirection: Axis.vertical,
+          children: <Widget>[
+            ListTile(
+              leading:Icon(Icons.home),
+              title: Text('Home'),
+              trailing:Icon(Icons.navigate_next),
+              onTap: (){},
+            ),
+            ListTile(
+              leading: Icon(Icons.event),
+              title: Text('Event'),
+              trailing: Icon(Icons.navigate_next),
+              onTap:(){},
+            ),
+            ListTile(
+              leading: Icon(Icons.camera),
+              title:Text('Camera'),
+              trailing: Icon(Icons.navigate_next),
+              onTap: (){},
+            ),
+          ],
 
+        ),
 
 
     );
