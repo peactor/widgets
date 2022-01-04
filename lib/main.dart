@@ -26,32 +26,34 @@ class MyHomePage extends StatelessWidget {
         title: Text('제목'),
       ),
       body:
-        ListView(
-          scrollDirection: Axis.vertical,
-          children: <Widget>[
-            ListTile(
-              leading:Icon(Icons.home),
-              title: Text('Home'),
-              trailing:Icon(Icons.navigate_next),
-              onTap: (){},
-            ),
-            ListTile(
-              leading: Icon(Icons.event),
-              title: Text('Event'),
-              trailing: Icon(Icons.navigate_next),
-              onTap:(){},
-            ),
-            ListTile(
-              leading: Icon(Icons.camera),
-              title:Text('Camera'),
-              trailing: Icon(Icons.navigate_next),
-              onTap: (){},
-            ),
-          ],
 
+    GridView.count(
+      crossAxisCount:2,
+      children: <Widget>[
+        Container(
+          color:Colors.red,
+          width: 100,
+          height:100,
+          padding:const EdgeInsets.all(8.0),
+          margin:const EdgeInsets.all(8.0),
+        ),
+        Container(
+          color:Colors.green,
+          width: 100,
+          height:100,
+          padding:const EdgeInsets.all(8.0),
+          margin:const EdgeInsets.all(8.0),
+        ),
+        Container(
+          color:Colors.blue,
+          width: 100,
+          height:100,
+          padding:const EdgeInsets.all(8.0),
+          margin:const EdgeInsets.all(8.0),
         ),
 
-
+      ],
+    ),
     );
   }
 }
