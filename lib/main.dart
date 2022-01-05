@@ -19,7 +19,8 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    return Center(
+    return Padding(
+      padding:const EdgeInsets.all(40.0),
       child: Container(
         color:Colors.red,
         width:100,
