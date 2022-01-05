@@ -19,25 +19,19 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    return Column(
-      children: <Widget>[
-        Expanded(
-          flex: 2,
-          child: Container(
-            color: Colors.red,
-          )
+    return Scaffold(
+      appBar:AppBar(
+        title: Text('제목'),
+      ),
+    body:
+      SizedBox(
+      width:100.0,
+      height:100.0,
+      child:Container(
+        color:Colors.red,
+      ),
+    ),
 
-        ),
-        Expanded(
-         child: Container(
-           color:Colors.green,
-         ),
-        ),
-        Expanded(child: Container(
-          color:Colors.blue,
-        ),
-        ),
-      ],
     );
   }
 }
