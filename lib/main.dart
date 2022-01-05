@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
       ),
       home: MyHomePage(),
     );
@@ -19,10 +19,12 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    return Padding(
-      padding:const EdgeInsets.all(40.0),
+    return Align(
+      alignment:Alignment.bottomRight,
       child: Container(
         color:Colors.red,
+        width:100,
+        height:100,
       ),
     );
   }
