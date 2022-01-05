@@ -19,13 +19,25 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    return Align(
-      alignment:Alignment.bottomRight,
-      child: Container(
-        color:Colors.red,
-        width:100,
-        height:100,
-      ),
+    return Column(
+      children: <Widget>[
+        Expanded(
+          flex: 2,
+          child: Container(
+            color: Colors.red,
+          )
+
+        ),
+        Expanded(
+         child: Container(
+           color:Colors.green,
+         ),
+        ),
+        Expanded(child: Container(
+          color:Colors.blue,
+        ),
+        ),
+      ],
     );
   }
 }
