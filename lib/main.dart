@@ -15,25 +15,49 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatelessWidget {
+class MyHomePage extends StatefulWidget {
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  var _index = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('제목'),
+        title:Text('복잡한 UI'),
       ),
       body: Center(
-        child: Card(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(16.0),
-          ),
-          elevation: 4.0,
-          child: Container(
-            width: 200,
-            height: 200,
-          ),
+        child:Text(
+          '$_index 페이지',
+          style: TextStyle(fontSize: 40),
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        onTap: (index){
+          setState(() {
+            _index = index;
+          });
+        },
+        currentIndex: _index,
+          items: <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+                title: Text('홈'),
+                icon: Icon(Icons.home),
+            ),
+            BottomNavigationBarItem(
+                title:Text('이용서비스'),
+                icon: Icon(Icons.assignment),
+            ),
+            BottomNavigationBarItem(
+                title: Text('내 정보'),
+                icon: Icon(Icons.account_circle),
+            ),
+          ],
+      ),
+
     );
   }
 }
